@@ -1,0 +1,165 @@
+/* App.css */
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: #7f8c8d;
+}
+
+/* Form Styling */
+.form-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.url-input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  padding: 12px 24px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background: #2980b9;
+}
+
+/* Result Styling */
+.result-container {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.success-message {
+  color: #27ae60;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.url-result {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.short-url {
+  color: #3498db;
+  word-break: break-all;
+  text-decoration: none;
+}
+
+.short-url:hover {
+  text-decoration: underline;
+}
+
+.copy-btn {
+  padding: 6px 12px;
+  background: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.copy-btn:hover {
+  background: #27ae60;
+}
+
+.error-message {
+  color: #e74c3c;
+  margin-top: 1rem;
+}
+
+.spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+  .input-group {
+    flex-direction: column;
+  }
+  
+  .url-result {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .submit-btn, .copy-btn {
+    width: 100%;
+  }
+}
+
+:root {
+  --primary: #3498db;
+  --primary-dark: #2980b9;
+  --success: #2ecc71;
+  --success-dark: #27ae60;
+  --error: #e74c3c;
+  --text: #2c3e50;
+  --light-bg: #f8f9fa;
+  --border: #ddd;
+}
+
+/* Then replace color values with variables, e.g.: */
+.submit-btn {
+  background: var(--primary);
+}
+.submit-btn:hover {
+  background: var(--primary-dark);
+}
