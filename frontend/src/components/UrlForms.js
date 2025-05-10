@@ -3,7 +3,7 @@ import axios from 'axios';
 
 function UrlForms() {
   const [input, setInput] = useState('');
-  const [shortUrl, setShortUrl] = useState(''); // Add this line
+  const [shortUrl, setShortUrl] = useState(''); 
   const [isLoading, setIsLoading] = useState(false);
 
 
@@ -13,7 +13,7 @@ function UrlForms() {
 
     try {
       const response = await axios.post(`http://localhost:3000/api/create-url`, { url: input });
-      setShortUrl(response.data.encurtedUrl); // Store the short URL
+      setShortUrl(response.data.encurtedUrl); 
     } catch (error) {
       console.error('Error shortening URL:', error);
     } finally {

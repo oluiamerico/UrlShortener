@@ -11,7 +11,7 @@ function App() {
         <UrlForms/>
       </main>
       <footer>
-        <p>&copy; 2023 URL Shortener</p>
+        <p>by luiamerico</p>
       </footer>
     </div>
   );
